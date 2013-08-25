@@ -13,7 +13,7 @@ module Jekyll
         old_slug = File.join(site.dest, self.data['old-slug'])
 
         # We write the symlink directly on the site destination
-        File.mkdir_p(File.dirname(old_slug))
+        FileUtils.mkdir_p(File.dirname(old_slug))
         File.symlink(path, old_slug)
       end
     end
