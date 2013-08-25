@@ -10,7 +10,7 @@ module Jekyll
       if not self.data['old-slug'].nil?
         path = File.join(CGI.unescape(self.url)).gsub(/^\//, '')
         path = File.join(path, "index.html") if template[/\.html$/].nil?
-        old_slug = File.join(site.dest, self.data['old-slug']))
+        old_slug = File.join(site.dest, self.data['old-slug'])
 
         # We write the symlink directly on the site destination
         File.mkdir_p(File.dirname(old_slug))
